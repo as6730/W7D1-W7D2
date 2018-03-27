@@ -1,13 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import App from './app';
 
-class Root extends React.Component {
-  render() {
-    return (
-      <h1>Todos App</h1>
-    );
-  }
-}
-
+const Root = ({ store }) => (
+  <Provider store={ store }>
+    <App />
+  </Provider>
+);
 
 export default Root;
